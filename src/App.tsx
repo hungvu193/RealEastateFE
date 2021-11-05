@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter, Switch, Redirect, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import LandingPage from './pages/Landing';
@@ -19,7 +19,7 @@ function App(): React.ReactElement {
               path="/invite/:inviteToken"
               component={VerifyInvitation}
             /> */}
-            <PrivateRoute exact path="/home" component={LandingPage} />
+            <Route exact path="/home" component={LandingPage} />
 
             {/* Redirect when route not found */}
             <Redirect to="/home" />
