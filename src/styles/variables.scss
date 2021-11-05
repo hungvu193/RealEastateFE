@@ -1,0 +1,124 @@
+// background colors
+$blue-bg: #093c4f;
+$darkblue-bg: #062a30;
+$theme-bg: #FFCA00;
+
+// text colors
+$lightblue-color: #9dc1cd;
+$theme-color: #664a03;
+$white: #fff;
+$gray: #655d5d;
+$red: #D32470;
+$logo: $red;
+
+
+$light-blue: #d9f0f4;
+$sky-blue: #3f86f6;
+$blue-1: #043d4d;
+
+$light-gold: #ffe885;
+$light-green: #ccd700;
+$black: #000;
+
+$text-dark: #043D4D;
+
+$border-round: 20px;
+
+$logo-font-name: "intro inline";
+$logo-font-weight: normal;
+$logo-font-size: 24px;
+
+$screen-max-width: 375px;
+$screen-padding: 32px;
+
+$input-height: 52px;
+$input-button-height: 54px;
+$input-button-border-radius: 26px;
+$input-border-radius: 12px;
+$input-border-width: 1px;
+
+
+$theme-top-padding: 36px;
+
+
+ @mixin wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+  color: $darkblue-bg;
+  padding-top: $theme-top-padding;
+}
+
+@mixin titleText {
+  max-width: $screen-max-width;
+  font-family: 'ProximaNova';
+  font-weight: bold;
+  color: $blue-1;
+  margin-bottom: 26px;
+}
+
+@mixin titleWrapper {
+  width: 100%;
+  margin-top: 12px;
+  margin-bottom: 25px;
+
+  & P {
+    @include titleText;
+  }
+  & p:nth-child(1) {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 0;
+    letter-spacing: -0.408px;
+    padding-bottom: 2px;
+    line-height: 22px;
+  }
+
+  & p:nth-child(2) {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+}
+
+@mixin contentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  width: 100%;
+  max-width: $screen-max-width;
+  padding: 0 32px;
+  flex: 1;
+  color: $darkblue-bg;
+  align-self: center;
+}
+
+@mixin submitContent {
+  text-align: center;
+  margin-top: 20px;
+  & button {
+    color: $white;
+    background-color: $blue-bg;
+    width: auto;
+    min-width: 70px;
+    height: 50px;
+    border: none;
+    border-radius: 24px;
+    padding: 0 30px;
+    & span {
+      font-size: 19px;
+      font-family: 'ProximaNova';
+      font-weight: bold;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $darkblue-bg;
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+}

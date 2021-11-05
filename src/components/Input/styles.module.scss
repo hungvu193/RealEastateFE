@@ -1,0 +1,129 @@
+@import '../../styles/variables.scss';
+
+.input {
+  background-color: transparent;
+  color: $darkblue-bg;
+  padding-left: 1.25rem;
+  height: $input-height;
+  border: $input-border-width solid $blue-bg;
+  border-radius: $input-border-radius;
+
+  &::placeholder {
+    color: $darkblue-bg;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: transparent;
+    border: $input-border-width solid $blue-bg;
+  }
+
+  &:disabled {
+    background-color: $gray;
+  }
+}
+
+.ant_picker {
+  background-color: transparent;
+  color: $darkblue-bg !important;
+  padding-left: 1.25rem;
+  height: $input-height;
+  border: $input-border-width solid $blue-bg;
+  border-radius: $input-border-radius;
+  width: 100%;
+  &::placeholder {
+    color: $darkblue-bg !important;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: transparent;
+    border: $input-border-width solid $blue-bg;
+  }
+
+  &:disabled {
+    background-color: $gray;
+  }
+
+  .ant-picker-input {
+    &::placeholder {
+      color: $blue-bg;
+    }
+  }
+}
+
+.input_custom_label {
+  background-color: transparent;
+  color: $darkblue-bg;
+  padding-left: 1.25rem;
+  height: $input-height;
+  border: $input-border-width solid $blue-bg;
+  border-radius: $input-border-radius;
+
+  &::placeholder {
+    color: $darkblue-bg;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: transparent;
+    border: $input-border-width solid $blue-bg;
+  }
+}
+
+:global(.ant-input-affix-wrapper) {
+  padding: 0;
+  background-color: transparent;
+  border: $input-border-width solid $blue-bg;
+  border-radius: $input-border-radius;
+  padding: 0 1.25rem;
+  &:hover,
+  &:focus,
+  &:active {
+    border: $input-border-width solid $blue-bg;
+  }
+}
+
+:global(.ant-input) {
+  background-color: transparent;
+  color: $darkblue-bg;
+  padding-left: 1.25rem;
+  height: $input-height;
+  border: $input-border-width solid $blue-bg;
+  border-radius: $input-border-radius;
+  &::placeholder {
+    color: $darkblue-bg;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: transparent;
+    border: $input-border-width solid $blue-bg;
+  }
+}
+
+:global(.ant-picker-input > input) {
+  color: $darkblue-bg;
+}
+
+$form-label-weight: 700;
+
+:global(.ant-picker-input input::placeholder),
+:global(.ant-picker-input-placeholder > input) {
+  color: $blue-1;
+  font-weight: $form-label-weight;
+}
+:global(.ant-form label) {
+  font-weight: $form-label-weight;
+}
+
+:global(.ant-form-item-has-error .ant-input),
+:global(.ant-form-item-has-error .ant-input:hover),
+:global(.ant-form-item-has-error .ant-input-affix-wrapper),
+:global(.ant-form-item-has-error .ant-input-affix-wrapper:hover) {
+  background-color: transparent;
+  color: $darkblue-bg;
+}

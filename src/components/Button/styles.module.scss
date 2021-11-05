@@ -1,0 +1,17 @@
+@import '../../styles/variables.scss';
+
+.custom_btn {
+  width: 5.625rem;
+  height: 5.625rem;
+  background-color: $blue-bg;
+  color: $white;
+  border: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $darkblue-bg;
+    color: $white;
+    text-decoration: underline;
+  }
+}
