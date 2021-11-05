@@ -39,11 +39,14 @@ const RealEstateItem: React.FC<{
         max={item.desc.length}
         readMoreText="Read more"
       />
-      {item.status === 'active' && (
-        <div>
-          <Button onClick={() => onClickExpired(item)}>Mark as Expire</Button>
-        </div>
-      )}
+      <div>
+        <Button
+          disabled={item.status === 'expired'}
+          onClick={() => onClickExpired(item)}
+        >
+          {item.status === 'expired' ? 'Expired' : 'Mark as Expire'}
+        </Button>
+      </div>
     </div>
   </div>
 );
