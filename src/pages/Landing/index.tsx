@@ -25,6 +25,7 @@ const LandingPage: React.FC = () => {
 
   return (
     <List
+      data-testid="landing-test-id"
       grid={{ gutter: 16, column: 2 }}
       itemLayout="horizontal"
       dataSource={data}
