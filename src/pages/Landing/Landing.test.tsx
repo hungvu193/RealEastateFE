@@ -2,7 +2,6 @@ import '../../constants/matchMedia';
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Landing from './index';
-import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
 import thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';

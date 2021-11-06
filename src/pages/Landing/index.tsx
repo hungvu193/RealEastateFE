@@ -14,7 +14,10 @@ const LandingPage: React.FC = () => {
   const [filterStatus, setFilterStatus] = React.useState('all');
 
   useEffect(() => {
-    const filtered = data.filter((item: RealEstateItemType) => (filterStatus === 'all' || filterStatus === item.status));
+    const filtered = data.filter(
+      (item: RealEstateItemType) =>
+        filterStatus === 'all' || filterStatus === item.status,
+    );
     setFilteredData(filtered);
   }, [filterStatus, data]);
 
@@ -27,16 +30,20 @@ const LandingPage: React.FC = () => {
     newData[foundExpiredIndex].status = 'expired';
 
     setData(newData);
-  }
+  };
 
   const handleChange = (status) => {
     setFilterStatus(status);
-  }
+  };
 
   return (
-    <div data-testid="landing-test-id" style={{ padding: "20px" }}>
+    <div data-testid="landing-test-id" style={{ padding: '20px' }}>
       <Row justify="end" style={{ marginBottom: 20 }}>
-        <Select style={{ width: 100 }} defaultValue="all" onChange={handleChange}>
+        <Select
+          style={{ width: 100 }}
+          defaultValue="all"
+          onChange={handleChange}
+        >
           <Option value="all">All</Option>
           <Option value="active">Active</Option>
           <Option value="expired">Expired</Option>

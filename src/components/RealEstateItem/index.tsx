@@ -9,7 +9,7 @@ const RealEstateItem: React.FC<{
   item: RealEstateItemType;
   onClickExpired: (item: RealEstateItemType) => void;
 }> = ({ item, onClickExpired }) => (
-  <div className={styles.item_container}>
+  <div datatest-id="real-estate-item" className={styles.item_container}>
     <Image className={styles.bg_estate} src={item.image} alt="img" />
     <div className={styles.info_estate}>
       <div className={styles.price_and_status}>
@@ -20,7 +20,10 @@ const RealEstateItem: React.FC<{
             <b className={styles.price}>{item.askingPrice}</b>
           </div>
         </h4>
-        <StatusView isExpried={item.status === 'expired'} />
+        <StatusView
+          datatest-id="estate-item-status"
+          isExpried={item.status === 'expired'}
+        />
       </div>
 
       <p>
@@ -41,6 +44,7 @@ const RealEstateItem: React.FC<{
       />
       <div>
         <Button
+          datatest-id="estate-button"
           disabled={item.status === 'expired'}
           onClick={() => onClickExpired(item)}
         >
