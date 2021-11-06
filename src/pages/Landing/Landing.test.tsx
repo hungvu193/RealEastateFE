@@ -18,7 +18,7 @@ const initialState = {
 const mockStore = configureStore(middleWares);
 const store = mockStore(initialState);
 
-describe('Child Detail page', () => {
+describe('Landing page', () => {
   beforeEach(() => {
     render(
       <Provider store={store}>
